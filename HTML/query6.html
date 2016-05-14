@@ -1,0 +1,35 @@
+<html>
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['CanucksFin56',     2],
+                ['niller_12',      2],
+                ['listed_items',  135],
+                ['ClarenceHill', 5],
+                ['ItsDaGang',    4],
+                ['finleym55',      2],
+                ['lukesicari',  3],
+                ['RockyRoddyP', 3],
+                ['PlayBoiRetro',    2],
+                ['Sudsanity', 2],
+            ]);
+
+            var options = {
+                title: 'Similar Screen names count',
+                is3D: true,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+<body>
+<div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+</body>
+</html>
